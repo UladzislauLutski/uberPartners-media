@@ -1,0 +1,223 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    position: fixed; /* делал фиксированное меню */
+    width: 100%; /* растягивал его на всю ширину */
+    top: 0; /* задавал ему позиционирование откуда начинать */
+    height: 50px;
+    background: #212121; 
+    z-index: 2;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 70px; /* задает отступы для меню внутри контейнера */
+    margin: 0; /* сбрасываем марджины на 0, так как они автоматом задаются бутстрэпом */
+    list-style: none; /* убирает кружки при ul */
+}
+
+.menu .menu_link {
+    font-weight: 300;
+    font-size: 15px;
+    align-items: center;
+    color: #FFFFFF;
+    text-decoration: none; /* чтобы не было нижнего подчеркивания у ссылки */
+}
+
+.menu .menu_item {
+    border-right: 2px dotted black; /* сделали разделительные полосы точечные */
+    padding-right: 28px; /* сделали им отступ справа */
+}
+
+.subheader {
+    top: 50px; /* делаем "отступ" 50пикселей, это размер нашего меню, которое было зафиксировано */
+    position: absolute; /* конкретно в данном случае делается для того, чтобы сдвинуть сабхедер наверх по оси З. не забываем родителю сделать позишн релатив */
+    z-index: 1;
+    width: 100%; /* убираем кашу, после позиционирования */
+    height: 84px;
+    background-color: rgba(0,0,0, .6); /* через альфа канал сделали прозрачность именно для фона, а не для всего контента сабхедер */
+}
+
+.subheader .subheader_logo {
+    display: block;
+    max-width: 100%;
+    margin-top: 16px;
+}
+
+.subheader_official {
+    margin-top: 6px;
+    opacity: 0.5;
+    font-weight: 100;
+    font-size: 13px;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.subheader .subheader_call {
+    margin-top: 19px;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.subheader .subheader_phnumber {
+    display: block;
+    margin-top: 8px;
+    line-height: 12px; /* регулирует отступ текста по высоте */
+    font-weight: 400;
+    font-size: 22px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none; /* чтобы не было нижнего подчеркивания у ссылки */
+}
+
+.subheader .subheader_btn { /* свойства кнопке и тексту на ней задаются в одном классе */
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 4px;
+
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
+
+.promo {
+    min-height: 800px;
+    background: url(../img/uber_bg_main.jpg) center center/cover no-repeat;
+    padding: 150px 0 135px 0;
+}
+
+.promo .promo_header {
+    margin: 0;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.promo .promo_subheader {
+    margin: 0;
+    margin-top: 22px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.promo .promo_descr {
+    margin: 0;
+    margin-top: 23px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.promo .promo_btn {
+    display: block;
+    margin: 118px auto 0 auto;
+    width: 259px;
+    height: 63px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
+
+.reasons {
+    padding: 26px 0 65px 0;
+}
+
+.reasons_promo {
+    margin-right: auto;
+    margin-left: auto;
+    width: 115px;
+	height: 27px;
+	background: #000000;
+}
+
+.reasons_promo >.reasons_promo_text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.eight_reasons {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.reasons .reasons_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.reasons .reasons_block .reasons_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    width: 113px;
+    height: 113px;
+    background-color: #1eacc7;
+    border-radius: 100%;
+}
+
+.reasons .reasons_block .reasons_descr {
+    width: 371px;
+    min-height: 151px;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_subtitle {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    align-items: center;
+    color: #1EACC7;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    align-items: center;
+    color: #202020;
+}
